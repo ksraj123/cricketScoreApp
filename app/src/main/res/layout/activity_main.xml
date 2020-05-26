@@ -6,39 +6,181 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <LinearLayout
+    <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark"
+        android:src="@drawable/cricketstadium"
+        android:scaleType="centerCrop"/>
+
+    <LinearLayout
+        android:layout_margin="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/board"
         android:orientation="horizontal"
-        android:layout_alignParentTop="true">
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="#80000000"
+        android:padding="30dp">
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingRight="30dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:text="India"
+                android:textColor="#e0e0e0" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="#e0e0e0"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp">
+            </View>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/score_india"
+                android:textAlignment="center"
+                android:textSize="48sp"
+                android:text="0"
+                android:layout_marginBottom="15dp"
+                android:textColor="#e0e0e0" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="single"
+                android:textSize="18sp"
+                android:layout_marginBottom="15dp"
+                android:background="#CCFFFFFF"
+                android:onClick="singleIndia"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Double"
+                android:textSize="18sp"
+                android:layout_marginBottom="15dp"
+                android:background="#CCFFFFFF"
+                android:onClick="doubleIndia"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Four"
+                android:textSize="18sp"
+                android:layout_marginBottom="15dp"
+                android:background="#CCFFFFFF"
+                android:onClick="fourIndia"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Six"
+                android:textSize="18sp"
+                android:layout_marginBottom="15dp"
+                android:background="#CCFFFFFF"
+                android:onClick="sixIndia"/>
+
         </LinearLayout>
 
         <View
             android:layout_width="3dp"
             android:layout_height="match_parent"
-            android:background="@color/colorPrimaryDark">
+            android:background="#e0e0e0">
 
         </View>
+
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingLeft="30dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:text="Australia"
+                android:textColor="#e0e0e0" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="#e0e0e0"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp">
+            </View>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/score_australia"
+                android:textAlignment="center"
+                android:textSize="48sp"
+                android:text="0"
+                android:layout_marginBottom="15dp"
+                android:textColor="#e0e0e0" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="single"
+                    android:textSize="18sp"
+                    android:layout_marginBottom="15dp"
+                    android:background="#CCFFFFFF"
+                    android:onClick="singleAustralia"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Double"
+                    android:textSize="18sp"
+                    android:layout_marginBottom="15dp"
+                    android:background="#CCFFFFFF"
+                    android:onClick="doubleAustralia"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Four"
+                    android:textSize="18sp"
+                    android:layout_marginBottom="15dp"
+                    android:background="#CCFFFFFF"
+                    android:onClick="fourAustralia"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Six"
+                    android:textSize="18sp"
+                    android:layout_marginBottom="15dp"
+                    android:background="#CCFFFFFF"
+                    android:onClick="sixAustralia"/>
 
         </LinearLayout>
+
     </LinearLayout>
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Reset"
         android:textSize="36sp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/board"/>
 
 </RelativeLayout>
