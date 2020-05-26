@@ -60,6 +60,12 @@ public class MainActivity extends AppCompatActivity {
         updateDisplays();
     }
 
+    public void reset(View view){
+        this.scoreIndia = 0;
+        this.scoreAustralia = 0;
+        updateDisplays();
+    }
+
     private void updateDisplays() {
         TextView scoreAustraliaView = (TextView) findViewById(R.id.score_australia);
         TextView scoreIndiaView = (TextView) findViewById(R.id.score_india);
